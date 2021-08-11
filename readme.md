@@ -1,0 +1,1 @@
+Python script for getting loadshedding data from eskom
