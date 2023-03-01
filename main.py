@@ -146,7 +146,7 @@ class GetLoadSheddingStatus:
                 path=dictionary[service]['Path'],
                 eventCallback=None,
                 createsignal=False).set_value(value)
-            mainlogger.debug(f'Successfully set {service} to value of {value}')
+            mainlogger.info(f'Successfully set {service} to value of {value}')
         except dbus.DBusException:
             mainlogger.warning('Exception in setting dbus service %s' % service)
 
@@ -174,7 +174,7 @@ if __name__ == '__main__':
         logger = logging.getLogger('loadsheddingchecker')
         logger.setLevel(logging.DEBUG)
         # Create a rotating filehandler
-        filehandler = RotatingFileHandler(path, maxBytes=25600, backupCount=1)
+        filehandler = RotatingFileHandler(path, maxBytes=5242880, backupCount=1)
         filehandler.setLevel(settings['fileloglevel'])
         # Create a streamhandler to print to console
         consolehandler = logging.StreamHandler()
