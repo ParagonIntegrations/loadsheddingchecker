@@ -11,6 +11,7 @@ settings = {
 	'sleeptime': 5,
 	'fileloglevel': logging.DEBUG,
 	'streamloglevel': logging.DEBUG,
+	'logsize': 5242880,
 	'dbusservices':{
 		'systemmode': {'Service': "com.victronenergy.vebus.ttyO1",
 						  'Path': "/Mode",

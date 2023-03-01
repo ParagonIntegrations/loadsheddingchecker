@@ -174,7 +174,7 @@ if __name__ == '__main__':
         logger = logging.getLogger('loadsheddingchecker')
         logger.setLevel(logging.DEBUG)
         # Create a rotating filehandler
-        filehandler = RotatingFileHandler(path, maxBytes=5242880, backupCount=1)
+        filehandler = RotatingFileHandler(path, maxBytes=settings['logsize'], backupCount=1)
         filehandler.setLevel(settings['fileloglevel'])
         # Create a streamhandler to print to console
         consolehandler = logging.StreamHandler()
